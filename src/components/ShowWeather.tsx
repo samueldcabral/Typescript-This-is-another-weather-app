@@ -9,69 +9,30 @@ type Props = {
     min: string,
     max: string,
     temp: string,
-    humidity: string
+    humidity: string,
+    icon_id: string
   }
 }
 
-interface weatherProps {
-  name? : string
-}
-
 const ShowWeather: React.FC<Props> = ({weather}: Props) => {
-  console.log(weather)
   return (
       <div >
         {weather.name && (
-          <table className="table table-light">
-            <thead>
-              <tr>
-                <th>{weather.name}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Temp </td>
-                <td>{weather.temp + "°C"}</td>
-              </tr>
-              <tr>
-                <td>Min tepm</td>
-                <td>{weather.min + "°C"}</td>
-              </tr>
-              <tr>
-                <td>Max temp</td>
-                <td>{weather.max + "°C"}</td>
-              </tr>
-              <tr>
-                <td>Humidity</td>
-                <td>{weather.humidity + "%"}</td>
-              </tr>
-              <tr>
-                <td>Weather</td>
-                <td>{weather.weather}</td>
-              </tr>
-              <tr>
-                <td>Wind speed</td>
-                <td>{weather.windSpeed + " Km/h"}</td>
-              </tr>
-              <tr>
-                <td>Visibility</td>
-                <td>{weather.visibility ? weather.visibility + " meters" : "Not available"}</td>
-              </tr>
-            </tbody>
-          </table>
-          // <div classNameName="card">
-          // <div classNameName="card-header">
-          //   {weather.name}
-          // </div>
-          // <ul classNameName="list-group list-group-flush">
-          //   <li classNameName="list-group-item">Cras justo odio</li>
-          //   <li classNameName="list-group-item">Dapibus ac facilisis in</li>
-          //   <li className="list-group-item">Vestibulum at eros</li>
-          // </ul> </div>
-        
+          <div className="card">
+          <img src={require('../resources/' + parseInt(weather.icon_id) + ".svg")} className="card-img-top image-table text-center" alt={weather.weather + " icon"} />
+          <div className="card-body">
+            <h1 className="card-text weather-name">{weather.name}</h1>
+            <h5 className="card-text mt-5">Temp now: {Math.round(parseInt(weather.temp))  + "°C"}</h5>
+            <h5 className="card-text">Temp min: {Math.round(parseInt(weather.min))  + "°C"}</h5>
+            <h5 className="card-text">Temp max: {Math.round(parseInt(weather.max))  + "°C"}</h5>
+            <h5 className="card-text">Humidity: {weather.humidity + "%"}</h5>
+            <h5 className="card-text">Weather: {weather.weather}</h5>
+            <h5 className="card-text">Wind speed: {weather.windSpeed + " Km/h"}</h5>
+            <h5 className="card-text">Visibility: {weather.visibility ? weather.visibility + " meters" : "Not available"}</h5>
+          </div>
+        </div>
         )}
       </div>
-
   )
 }
 

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
+
 body, html {
   margin: 0;
   padding: 0;
@@ -5,12 +7,22 @@ body, html {
 
 .App {
   text-align: center;
-  background-image: url('resources/background.jpg');
-  background-size: cover;
+  background: linear-gradient(#e6c464, #ffaf90);
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
-h1 {
-  margin: 0;
+.image-table {
+  width: 15%;
+  height: 15%;
+  margin: auto;
+}
+
+.weather-name {
+  font-family: 'Mansalva', cursive;
+}
+
+.main-heading {
+  padding-top: 100px;
 }
