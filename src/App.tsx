@@ -1,14 +1,12 @@
 import React from 'react';
+import SearchBar from './components/SearchBar';
 import './App.css';
 
 const App: React.FC = () => {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>
-          This is my first typescript react app!
-        </h1>
-      </header>
+      <SearchBar/>
     </div>
   );
 }
