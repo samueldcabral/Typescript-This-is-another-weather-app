@@ -1,7 +1,7 @@
 # This is Another Weather App - Using Typescript and React
 
-> This is the deployed version, please test it!
-[https://samueldcabral.github.io/Typescript-Simple-Weather-App/](https://samueldcabral.github.io/Typescript-Simple-Weather-App/ "Deployed App")
+> This is the deployed version to github pages:
+[https://samueldcabral.github.io/Typescript-This-is-another-weather-app/](https://samueldcabral.github.io/Typescript-This-is-another-weather-app/ "Deployed App")
 ---
 
 ## This is a simple weather app using React with Typescript
