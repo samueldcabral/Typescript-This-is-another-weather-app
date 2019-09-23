@@ -5,7 +5,7 @@
 ---
 
 ## This is a simple weather app using React with Typescript
-## It was very interesting to put Typescript in practice
+## It was very interesting to put Typescript into practice
 
 ---
 ### Screenshot
